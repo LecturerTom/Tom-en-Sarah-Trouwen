@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Bevestig jullie aanwezigheid voor het huwelijk van Tom en Sarah vóór 1 januari 2027.">
+  <meta name="theme-color" content="#fffaf5">
+  <title>RSVP | Tom &amp; Sarah</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Ga naar de inhoud</a>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Tom en Sarah, home">
+    <span class="brand-mark">T&amp;S</span>
+    <span class="brand-date">27 maart 2027</span>
+  </a>
+  <button class="menu-toggle" type="button" aria-label="Menu openen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="site-nav" aria-label="Hoofdnavigatie">
+    <a href="index.html">Home</a><a href="uitnodiging.html">Uitnodiging</a><a href="ons-verhaal.html">Ons verhaal</a><a href="de-dag.html">De dag</a><a href="praktisch.html">Praktisch</a><a href="fotos.html">Foto’s</a><a class="nav-rsvp" href="rsvp.html" aria-current="page">RSVP</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<section class="page-hero">
+  <div class="narrow centered-text">
+    <span class="eyebrow">Antwoord vóór 1 januari 2027</span>
+    <h1>Zijn jullie erbij?</h1>
+    <p class="lead">We hopen van harte dat we deze dag samen met jullie mogen vieren. Eén antwoord per huishouden of uitnodiging volstaat.</p>
+  </div>
+</section>
+
+<section class="section section-topless">
+  <form class="form-shell" id="rsvp-form"
+        action="https://formsubmit.co/tom.vandecasteele@hotmail.com"
+        method="POST">
+    <input type="hidden" name="_subject" id="rsvp-subject" value="RSVP">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_replyto" id="rsvp-replyto" value="">
+    <input type="hidden" name="_url" id="rsvp-source-url" value="">
+    <input type="hidden" name="_next" id="rsvp-next-url" value="" disabled>
+    <input class="honeypot" type="text" name="_honey" tabindex="-1"
+           autocomplete="off" aria-hidden="true">
+    <div class="section-title">
+      <span class="eyebrow">RSVP</span>
+      <h2>Laat ons iets weten</h2>
+      <p>Vul het formulier hieronder in. Na verzending ontvangen wij jullie antwoord rechtstreeks per e-mail.</p>
+    </div>
+
+    <div class="form-grid">
+      <div class="field">
+        <label for="invite-name">Naam op de uitnodiging</label>
+        <input id="invite-name" name="Naam op de uitnodiging" autocomplete="name" required>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mailadres</label>
+        <input id="email" name="E-mailadres" type="email" autocomplete="email" required>
+      </div>
+
+      <div class="field full">
+        <label for="guest-names">Namen van alle personen voor wie je antwoordt</label>
+        <input id="guest-names" name="Namen van alle personen" required>
+      </div>
+
+      <div class="field">
+        <label for="attendance">Kunnen jullie aanwezig zijn?</label>
+        <select id="attendance" name="Aanwezigheid" required>
+          <option value="">Maak een keuze</option>
+          <option>Ja, met veel plezier</option>
+          <option>Helaas niet</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="phone">Telefoonnummer</label>
+        <input id="phone" name="Telefoonnummer" type="tel" autocomplete="tel">
+      </div>
+
+      <fieldset class="field full">
+        <legend>Bij welke onderdelen zullen jullie aanwezig zijn?</legend>
+        <div class="checkbox-grid">
+          <label class="check"><input type="checkbox" name="Aanwezig bij ceremonie" value="Ja"> Ceremonie</label>
+          <label class="check"><input type="checkbox" name="Aanwezig bij receptie" value="Ja"> Receptie</label>
+          <label class="check"><input type="checkbox" name="Aanwezig bij diner" value="Ja"> Diner</label>
+          <label class="check"><input type="checkbox" name="Aanwezig bij avondfeest" value="Ja"> Avondfeest</label>
+        </div>
+      </fieldset>
+
+      <div class="field full">
+        <label for="diet">Allergieën of dieetwensen — vermeld voor welke persoon</label>
+        <textarea id="diet" name="Allergieën of dieetwensen"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="stay">Willen jullie ter plaatse overnachten?</label>
+        <select id="stay" name="Overnachting ter plaatse">
+          <option value="">Maak een keuze</option>
+          <option>Ja</option>
+          <option>Nee</option>
+          <option>Misschien, graag meer informatie</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="room-guests">Voor hoeveel personen wensen jullie een kamer?</label>
+        <input id="room-guests" name="Aantal personen voor een kamer" type="number" min="1" max="8">
+      </div>
+
+      <div class="field">
+        <label for="breakfast">Ontbijten jullie zondag met ons mee?</label>
+        <select id="breakfast" name="Ontbijt op zondag">
+          <option value="">Maak een keuze</option>
+          <option>Ja</option>
+          <option>Nee</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="song">Welk nummer mag niet ontbreken?</label>
+        <input id="song" name="Muziekverzoek">
+      </div>
+
+      <div class="field full">
+        <label for="notes">Toegankelijkheidsbehoeften of andere opmerkingen</label>
+        <textarea id="notes" name="Andere opmerkingen"></textarea>
+      </div>
+    </div>
+
+    <div class="button-row">
+      <button class="btn primary" type="submit">Antwoord verzenden</button>
+    </div>
+
+    <div class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+    <p class="small rsvp-test-note" hidden>
+      Tijdens een lokale test opent na verzending een bevestigingspagina van de formulierenservice. Op de gepubliceerde website keren gasten automatisch terug naar onze bedankpagina.
+    </p>
+    <p class="small">Op jullie persoonlijke uitnodiging staat vermeld voor welke onderdelen van de dag jullie zijn uitgenodigd. De ingevulde gegevens worden uitsluitend gebruikt voor de organisatie van ons huwelijk.</p>
+  </form>
+</section>
+
+
+<section class="page-countdown-section" aria-labelledby="countdown-title">
+  <div class="narrow centered-text">
+    <span class="eyebrow">We tellen af</span>
+    <h2 id="countdown-title">Tot onze trouwdag</h2>
+
+    <div class="countdown page-countdown" data-countdown aria-label="Aftellen tot de trouwdag">
+      <div><strong data-days>—</strong><span>dagen</span></div>
+      <div><strong data-hours>—</strong><span>uren</span></div>
+      <div><strong data-minutes>—</strong><span>minuten</span></div>
+      <div><strong data-seconds>—</strong><span>seconden</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-names">Tom &amp; Sarah</div>
+  <div>27 maart 2027 · Lodewijk van Male · Brugge</div>
+  <nav class="footer-nav" aria-label="Voettekstnavigatie">
+    <a href="uitnodiging.html">Uitnodiging</a>
+    <a href="ons-verhaal.html">Ons verhaal</a>
+    <a href="de-dag.html">De dag</a>
+    <a href="praktisch.html">Praktisch</a>
+    <a href="rsvp.html">RSVP</a>
+    <a href="fotos.html">Foto’s</a>
+  </nav>
+</footer>
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
