@@ -95,3 +95,11 @@ RSVP-antwoorden normaal afgeleverd.
   FormSubmit getoond.
 - Bij het allereerste formulier moet het ontvangende e-mailadres nog steeds
   eenmalig worden bevestigd via de activatiemail.
+
+
+## Versie 17 — Web3Forms
+
+- FormSubmit is vervangen door Web3Forms.
+- Het onderwerp is `RSVP - [Naam op de uitnodiging]`.
+- Het e-mailadres van de gast wordt als reply-to gebruikt.
+- Op GitHub Pages volgt na verzending de eigen bedankpagina.

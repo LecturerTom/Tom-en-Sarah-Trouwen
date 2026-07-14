@@ -119,14 +119,12 @@ if (countdown) {
 
 
 
+
 const rsvpForm = document.querySelector("#rsvp-form");
 if (rsvpForm) {
   const inviteNameInput = rsvpForm.querySelector("#invite-name");
-  const emailInput = rsvpForm.querySelector("#email");
   const subjectInput = rsvpForm.querySelector("#rsvp-subject");
-  const replyToInput = rsvpForm.querySelector("#rsvp-replyto");
-  const sourceUrlInput = rsvpForm.querySelector("#rsvp-source-url");
-  const nextUrlInput = rsvpForm.querySelector("#rsvp-next-url");
+  const redirectInput = rsvpForm.querySelector("#rsvp-redirect");
   const submitButton = rsvpForm.querySelector('button[type="submit"]');
   const localTestNote = rsvpForm.querySelector(".rsvp-test-note");
 
@@ -138,11 +136,9 @@ if (rsvpForm) {
       .slice(0, 100);
   }
 
-  function updateMessageFields() {
+  function updateSubject() {
     const inviteName = cleanSubjectPart(inviteNameInput?.value || "");
     subjectInput.value = inviteName ? `RSVP - ${inviteName}` : "RSVP";
-    replyToInput.value = emailInput?.value.trim() || "";
-    sourceUrlInput.value = window.location.href;
   }
 
   function configureReturnPage() {
@@ -151,20 +147,19 @@ if (rsvpForm) {
       window.location.protocol === "https:";
 
     if (isHosted) {
-      nextUrlInput.value =
+      redirectInput.value =
         new URL("rsvp-bedankt.html", window.location.href).href;
-      nextUrlInput.disabled = false;
+      redirectInput.disabled = false;
     } else {
-      nextUrlInput.disabled = true;
+      redirectInput.disabled = true;
       if (localTestNote) localTestNote.hidden = false;
     }
   }
 
-  inviteNameInput?.addEventListener("input", updateMessageFields);
-  emailInput?.addEventListener("input", updateMessageFields);
+  inviteNameInput?.addEventListener("input", updateSubject);
 
   configureReturnPage();
-  updateMessageFields();
+  updateSubject();
 
   rsvpForm.addEventListener("submit", event => {
     if (!rsvpForm.reportValidity()) {
@@ -172,8 +167,7 @@ if (rsvpForm) {
       return;
     }
 
-    updateMessageFields();
-
+    updateSubject();
     submitButton.disabled = true;
     submitButton.textContent = "Bezig met verzenden…";
   });

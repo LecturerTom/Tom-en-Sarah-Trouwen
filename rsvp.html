@@ -37,15 +37,14 @@
 
 <section class="section section-topless">
   <form class="form-shell" id="rsvp-form"
-        action="https://formsubmit.co/tom.vandecasteele@hotmail.com"
+        action="https://api.web3forms.com/submit"
         method="POST">
-    <input type="hidden" name="_subject" id="rsvp-subject" value="RSVP">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_replyto" id="rsvp-replyto" value="">
-    <input type="hidden" name="_url" id="rsvp-source-url" value="">
-    <input type="hidden" name="_next" id="rsvp-next-url" value="" disabled>
-    <input class="honeypot" type="text" name="_honey" tabindex="-1"
-           autocomplete="off" aria-hidden="true">
+    <input type="hidden" name="access_key" value="4431ed3f-5ca0-4d63-a5ac-b2311f60b408">
+    <input type="hidden" name="subject" id="rsvp-subject" value="RSVP">
+    <input type="hidden" name="from_name" value="Trouwwebsite Tom &amp; Sarah">
+    <input type="hidden" name="redirect" id="rsvp-redirect" value="" disabled>
+    <input type="checkbox" name="botcheck" class="honeypot"
+           tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="section-title">
       <span class="eyebrow">RSVP</span>
       <h2>Laat ons iets weten</h2>
@@ -60,7 +59,7 @@
 
       <div class="field">
         <label for="email">E-mailadres</label>
-        <input id="email" name="E-mailadres" type="email" autocomplete="email" required>
+        <input id="email" name="email" type="email" autocomplete="email" required>
       </div>
 
       <div class="field full">
@@ -138,7 +137,7 @@
 
     <div class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
     <p class="small rsvp-test-note" hidden>
-      Tijdens een lokale test opent na verzending een bevestigingspagina van de formulierenservice. Op de gepubliceerde website keren gasten automatisch terug naar onze bedankpagina.
+      Tijdens een lokale test opent na verzending de bevestigingspagina van Web3Forms. Op de gepubliceerde website keren gasten automatisch terug naar onze bedankpagina.
     </p>
     <p class="small">Op jullie persoonlijke uitnodiging staat vermeld voor welke onderdelen van de dag jullie zijn uitgenodigd. De ingevulde gegevens worden uitsluitend gebruikt voor de organisatie van ons huwelijk.</p>
   </form>
